@@ -3,6 +3,27 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constractor(props){
+    super(props);
+    this.state = {
+      searchResults: [{
+        'name': 'Zaba',
+        'artist': 'Goran',
+        'album': 'Tralala'
+      },{
+        'name': 'zaba1',
+        'artist': 'Dush',
+        'album': 'Bar'
+      },{
+        'name': 'bar',
+        'artist': 'nik',
+        'album': 'foo'
+      }]
+    };
+  }
+
+
+
   render() {
     return (
       <div className="App">
