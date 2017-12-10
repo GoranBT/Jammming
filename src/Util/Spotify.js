@@ -44,7 +44,36 @@ const Spotify = {
         uri: track.uri
       }));
     });
-  },
+  }
+  // async search(term) {
+  //   const searchUrl = 'https://api.spotify.com/v1/search?type=track&q=' + term;
+  //   const accessToken = Spotify.getAccessToken();
+  //   const authorization = {
+  //     headers: {Authorization: `Bearer ${accessToken}`}
+  //   };
+  //   try {
+  //     const response = await fetch(searchUrl, authorization);
+  //     if(response.ok){
+  //       const jsonResponse = await response.json();
+  //       if (!jsonResponse.tracks) {
+  //         return [];
+  //       }
+  //       return jsonResponse.tracks.items.map(track => ({
+  //         id: track.id,
+  //         name: track.name,
+  //         artist: track.artists[0].name,
+  //         album: track.album.name,
+  //         uri: track.uri
+  //       }));
+  //     } throw new Error('Request failed!');
+  //   }catch(error) {
+  //     console.log(error);
+  //   }
+  //
+  //
+  //
+  // }
+  ,
   savePlaylist(name, trackUris) {
     if (!name || !trackUris || !trackUris.length) {
       return;

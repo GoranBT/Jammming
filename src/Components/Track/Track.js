@@ -24,14 +24,36 @@ class Track extends React.Component{
     }
   }
 
+  songPreview() {
+    if (!this.props.onAdd) {
+      return (
+        <div>
+          <iframe
+            title={this.props.track.name}
+            src={`https://open.spotify.com/embed?uri=spotify:track:${this.props.track.id}`}
+            frameBorder="0"
+            allowTransparency="true"
+            height="80"
+          />
+        </div>
+      );
+    } else {
+      return (
+        <div className="Track-information">
+          <h3>{this.props.track.name}</h3>
+          <p>
+            {this.props.track.artist} | {this.props.track.album}
+          </p>
+        </div>
+      );
+    }
+  }
+
   render(){
     console.log('track', this.props.track);
     return (
       <div className="Track">
-        <div className="Track-information">
-          <h3>{this.props.track.name}</h3>
-          <p>{this.props.track.artist} | {this.props.track.album}</p>
-        </div>
+        {this.songPreview()}
         {this.renderAction()}
       </div>
     );
