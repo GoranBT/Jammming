@@ -1,4 +1,4 @@
-const redirectUri = 'https://goranbt_jammming.surge.sh';
+const redirectUri = 'https://goranbt.github.io/Jammming/';
 const clientId = '236783ceca29418dbec1e3181f7e431f';
 let accessToken;
 
